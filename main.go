@@ -308,5 +308,5 @@ func main() {
 		Context: ctx,
 	}, r)
 
-	http.ListenAndServe(":6821", nil)
+	http.ListenAndServe(":6821", r)
 }
