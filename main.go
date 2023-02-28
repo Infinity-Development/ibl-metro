@@ -71,7 +71,6 @@ type addBot struct {
 	Tags             []string `db:"tags"`
 	Prefix           string   `db:"prefix"`
 	Owner            string   `db:"owner"`
-	AdditionalOwners []string `db:"additional_owners"`
 	Short            string   `db:"short"`
 	Long             string   `db:"long"`
 	Invite           string   `db:"invite"`
@@ -149,7 +148,6 @@ func (adp MetroIBLAdapter) addBot(bot *types.FullBot) error {
 		Tags:             bot.Tags,
 		Prefix:           prefix,
 		Owner:            bot.Owner,
-		AdditionalOwners: bot.ExtraOwners,
 		Short:            bot.Description,
 		Long:             bot.LongDescription,
 		Invite:           invite,
